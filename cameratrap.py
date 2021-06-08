@@ -11,16 +11,15 @@ GPIO.setup(17, GPIO.HIGH)
 GPIO.setup(18, GPIO.LOW)
 
 while True:
-    i = GPIO.input(17)
-    if i == 1:
+    if GPIO.input(17) == 1:
        camera.start_preview()
        filename = "/home/pi/Desktop/images/" + (time.strftime("%y%b%d_%H:%M:%S")) + ".jpg"
        camera.capture(filename)
-       print("motion detected!", i)
+       print("motion detected!")
        GPIO.output(18,1)
        time.sleep(3)
-    elif i == 0:
-        print("no motion detected!",i)
+    else:
+        print("no motion detected!")
         GPIO.output(18,0)
         time.sleep(3)
         camera.stop_preview()
