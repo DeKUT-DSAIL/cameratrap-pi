@@ -1,4 +1,22 @@
 #!/bin/bash
 
 
-python trial.py
+python cametrap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.py
