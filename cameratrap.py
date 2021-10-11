@@ -6,31 +6,39 @@ images using a picamera once motion is detected.
 from gpiozero import MotionSensor
 from picamera import PiCamera
 import RPi.GPIO as GPIO
+import logging
 import time
 
 time.sleep(30)
 
-#set GPIO pin 17 as input from the Motion Sensor
-#set GPIO pin 27 as an output for the LED
-pir = MotionSensor(17) 
-camera = PiCamera()
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.HIGH)
-GPIO.setup(27, GPIO.LOW) 
+logging.basicConfig(filename='cameratrap.log', level=logging.DEBUG)
 
-while True:
-    if GPIO.input(17):
-       camera.start_preview()
-       filename = "/home/pi/cameratrap/" + (time.strftime("%y%b%d_%H:%M:%S")) + ".jpg"
-       camera.capture(filename)
-       print("Motion detected!")
-       GPIO.output(27,1)
-       time.sleep(1)
-    else:
-        print("No motion detected!")
-        GPIO.output(27,0)
-        time.sleep(1)
-        camera.stop_preview()
+
+try:
+    #set GPIO pin 17 as input from the Motion Sensor
+    #set GPIO pin 27 as an output for the LED
+    pir = MotionSensor(17) 
+    camera = PiCamera()
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(17, GPIO.HIGH)
+    GPIO.setup(27, GPIO.LOW) 
+
+    while True:
+        if GPIO.input(17):
+           camera.start_preview()
+           filename = "/home/pi/cameratrap/" + (time.strftime("%y%b%d_%H:%M:%S")) + ".jpg"
+           camera.capture(filename)
+           print("Motion detected!")
+           GPIO.output(27,1)
+           time.sleep(1)
+        else:
+            print("No motion detected!")
+            GPIO.output(27,0)
+            time.sleep(1)
+            camera.stop_preview()
+            
+except Exception as err:
+    logging.info(str(err))
 
 
