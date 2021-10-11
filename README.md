@@ -23,8 +23,15 @@ Our data is in the form of images saved in jpg format. They are saved in the for
 The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, waterbucks and zebras.
 
 ##Raspberrypi Ssetup process
+1. Update the raspberrypi
+      `sudo apt-get install`
+      
+      `sudo apt-get upgrade`
+2. Enable Interfaces
 
-1. Clone the following folders containing environment setup, and necessary python files.
+      `sudo raspi-config`
+
+3. Clone the following folders containing environment setup, and necessary python files.
 
       `git clone https://github.com/DeKUT-DSAIL/powering-raspberrypi.git`
       
@@ -32,14 +39,14 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
       
       `git clone https://github.com/kiariegabriel/rpi-.git`
       
-2. on the terminal, run the following lines one after the other to setup the environment and install required modules.
+4. on the terminal, run the following lines one after the other to setup the environment and install required modules.
 
     `cd powering-raspberrypi`
     
     `./env-setup-bash`
     
     
-2. Change permission for the bash files we will use to make our cameratrap work.
+5. Change permission for the bash files we will use to make our cameratrap work.
 
     `cd`
     
@@ -51,7 +58,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
     
     `chmod +x time-set-bash.sh`
     
-3. Set crontab for the bash files to run 
+6. Set crontab for the bash files to run 
 
     `crontab -l`
     
