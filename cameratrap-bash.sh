@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-python cametrap
+python /home/pi/cameratrap-pi/cameratrap.py
 
 
 
@@ -15,8 +15,3 @@ python cametrap
 
 
 
-
-
-
-
-.py
