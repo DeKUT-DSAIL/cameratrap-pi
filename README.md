@@ -28,12 +28,13 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 `
       git clone https://github.com/DeKUT-DSAIL/powering-raspberrypi.git
       git clone https://github.com/DeKUT-DSAIL/cameratrap-pi.git
-      git clone https://github.com/kiariegabriel/rpi-.git
+      git clone https://github.com/kiariegabriel/rpi-.git `
       
 2. on the terminal, run the following lines one after the other to setup the environment and install required modules.
 `
     cd powering-raspberrypi
     ./env-setup-bash
+    `
     
 2. Change permission for the bash files we will use to make our cameratrap work.
 `
@@ -42,12 +43,12 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
     chmod +x cameratrap-bash.sh
     chmod +x power-management-bash.sh
     chmod +x time-set-bash.sh
-    
+    `
 3. Set crontab for the bash files to run @reboot
 `
     crontab -l
     
-   
+   `
 
 
 
