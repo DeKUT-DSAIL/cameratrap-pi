@@ -26,11 +26,11 @@ while True:
        camera.capture(filename)
        print("Motion detected!")
        GPIO.output(27,1)
-       time.sleep(3)
+       time.sleep(1)
     else:
         print("No motion detected!")
         GPIO.output(27,0)
-        time.sleep(3)
+        time.sleep(1)
         camera.stop_preview()
 
 
