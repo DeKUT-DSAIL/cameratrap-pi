@@ -47,7 +47,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
     `./env-setup-bash`
     
     
-5. Change permission for the bash files we will use to make our cameratrap work.
+5. Make bash files executable.
 
     `cd`
     
