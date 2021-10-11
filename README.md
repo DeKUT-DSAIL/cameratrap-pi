@@ -40,7 +40,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
       
       `git clone https://github.com/kiariegabriel/rpi-.git`
       
-4. on the terminal, run the following lines one after the other to setup the environment and install required modules.
+4. On the terminal, run the following lines one after the other to setup the environment and install required modules.
 
     `cd powering-raspberrypi`
     
