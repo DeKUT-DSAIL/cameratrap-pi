@@ -25,7 +25,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 ## Raspberrypi setup process
 1. Update the raspberrypi
 
-      `sudo apt-get install`
+      `sudo apt-get update`
       
       `sudo apt-get upgrade`
 2. Enable Interfaces
