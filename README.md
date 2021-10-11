@@ -55,7 +55,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
     `crontab -l`
     
-    `@reboot path of bash file`
+    `@reboot 'path of bash file'`
     
  
 
