@@ -26,7 +26,9 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
 1. Clone the following folders containing environment setup, and necessary python files.
       `git clone https://github.com/DeKUT-DSAIL/powering-raspberrypi.git`
+      
       `git clone https://github.com/DeKUT-DSAIL/cameratrap-pi.git`
+      
       `git clone https://github.com/kiariegabriel/rpi-.git`
       
 2. on the terminal, run the following lines one after the other to setup the environment and install required modules.
