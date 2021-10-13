@@ -11,7 +11,8 @@ import time
 
 time.sleep(30)
 
-logging.basicConfig(filename='cameratrap.log', level=logging.DEBUG)
+logging.basicConfig(filename='cameratrap.log', level=logging.DEBUG, 
+                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 
 try:
