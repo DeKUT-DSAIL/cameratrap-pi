@@ -44,7 +44,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
     `cd powering-raspberrypi`
     
-    `./env-setup-bash`
+    `./raspi_setup.sh`
     
     
 5. Make bash files executable.
