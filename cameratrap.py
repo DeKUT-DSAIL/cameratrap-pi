@@ -7,6 +7,7 @@ from gpiozero import MotionSensor
 from picamera import PiCamera
 import RPi.GPIO as GPIO
 import logging
+import os
 import time
 
 time.sleep(30)
@@ -14,6 +15,7 @@ time.sleep(30)
 logging.basicConfig(filename='cameratrap.log', level=logging.DEBUG, 
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
+os.mkdir("/home/pi/cameratrap")
 
 try:
     #set GPIO pin 17 as input from the Motion Sensor
@@ -28,15 +30,15 @@ try:
     while True:
         if GPIO.input(17):
            camera.start_preview()
-           filename = "/home/pi/cameratrap/" + (time.strftime("%y%b%d_%H:%M:%S")) + ".jpg"
+           filename = "/home/pi/cameratrap/" + (time.strftime("%Y-%m-%d-%H-%M-%S-%p")) + ".jpg"
            camera.capture(filename)
            print("Motion detected!")
            GPIO.output(27,1)
-           time.sleep(1)
+           time.sleep(2)
         else:
             print("No motion detected!")
             GPIO.output(27,0)
-            time.sleep(1)
+            time.sleep(2)
             camera.stop_preview()
             
 except Exception as err:
