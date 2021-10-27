@@ -31,7 +31,7 @@ try:
     while True:
         if GPIO.input(17):
            camera.start_preview()
-           filename = "/home/pi/cameratrap/" + (time.strftime("%Y-%m-%d-%H-%M-%S-%p")) + ".jpg"
+           filename = "/home/pi/cameratrap/" + (time.strftime("%Y-%m-%d-%H-%M-%S")) + ".jpg"
            camera.capture(filename)
            print("Motion detected!")
            GPIO.output(27,1)
