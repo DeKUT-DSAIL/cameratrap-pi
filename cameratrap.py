@@ -15,7 +15,8 @@ time.sleep(30)
 logging.basicConfig(filename='cameratrap.log', level=logging.DEBUG, 
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
-os.mkdir("/home/pi/cameratrap")
+if not os.path.exists("/home/pi/cameratrap"):
+    os.mkdir("/home/pi/cameratrap")
 
 try:
     #set GPIO pin 17 as input from the Motion Sensor
