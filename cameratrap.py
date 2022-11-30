@@ -33,6 +33,7 @@ try:
            camera.start_preview()
            filename = "/home/pi/cameratrap/" + (time.strftime("%Y-%m-%d-%H-%M-%S")) + ".jpg"
            camera.capture(filename)
+           camera.stop_preview()
            print("Motion detected!")
            GPIO.output(27,1)
            time.sleep(2)
@@ -40,7 +41,6 @@ try:
             print("No motion detected!")
             GPIO.output(27,0)
             time.sleep(2)
-            camera.stop_preview()
             
 except Exception as err:
     logging.info(str(err))
