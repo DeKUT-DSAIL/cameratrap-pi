@@ -1,7 +1,7 @@
 # Camera trap 
 
 ## Background
-Having up to date information about the location and behaviour of animals in the wild will improve our ability to study and better conserve natural ecosystems. It will also help us mange and protect these ecosystems. 
+Having up to date information about the location and behaviour of animals in the wild will improve our ability to study and better conserve natural ecosystems. It will also help us manage and protect these ecosystems. 
 
 Motion sensor cameras in natural habitats offer an inexpensive opportunity to gather data on animals.
 
@@ -51,11 +51,11 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
     
     `cd cameratrap-pi`
     
-    `chmod +x cameratrap-bash.sh`
+    `chmod +x cameratrap.sh`
     
-    `chmod +x power-management-bash.sh`
+    `chmod +x power.sh`
     
-    `chmod +x time-set-bash.sh`
+    `chmod +x timeset.sh`
     
 6. Set crontab for the bash files to run 
 
