@@ -4,3 +4,5 @@
 
    - Best Solution : use Raspberry Pi OS Buster.
    - Other solution: find out how to use camera in Raspberry Pi Bullseye
+  
+   - To check you raspberry pi version: run `lsb_release -irdc`
