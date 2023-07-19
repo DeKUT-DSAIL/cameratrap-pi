@@ -51,11 +51,11 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
     
     `cd cameratrap-pi`
     
-    `chmod +x cameratrap.sh`
-    
     `chmod +x power.sh`
     
     `chmod +x timeset.sh`
+
+    `chmod +x cameratrap.sh`
     
 6. Set crontab for the bash files to run 
 
