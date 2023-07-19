@@ -40,7 +40,7 @@ try:
            #Capture video
            GPIO.output(27,1)
            camera.start_recording(filename_h264)
-           camera.wait_recording(5)
+           camera.wait_recording(10)
            camera.stop_recording()
            #print("Motion detected!")
            time.sleep(2)
