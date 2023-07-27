@@ -10,6 +10,7 @@
    - Login
    - `hostname -I`
    - You now have the IP address.
+   
    b. Open VNC Viewer
    - Input ip address in VNC connect.
 
