@@ -13,6 +13,7 @@
    
    b. Open VNC Viewer
    - Input ip address in VNC connect.
+   - You've now accessed your Raspberry Pi remotely.
 
 # Errors
 1. Camera is not enabled issue yet running on sudo raspi-config shows enabled camera:
