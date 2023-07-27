@@ -3,6 +3,15 @@
 
 2. Raspberry Pi pinout diagram
    ![image](https://github.com/DeKUT-DSAIL/cameratrap-pi/assets/54037190/03cc3a34-3fc1-4ddc-9315-74a0712d01c2)
+3. Accessing Raspberry Pi Remotely.
+   
+   a. Obtain IP address (given your raspberry pi is connected to the same network as your device.
+   - Open `Putty` and add `raspberrypi.local` to it's SSH hostname/ipaddress, port 22 `default`.
+   - Login
+   - `hostname -I`
+   - You now have the IP address.
+   b. Open VNC Viewer
+   - Input ip address in VNC connect.
 
 # Errors
 1. Camera is not enabled issue yet running on sudo raspi-config shows enabled camera:
