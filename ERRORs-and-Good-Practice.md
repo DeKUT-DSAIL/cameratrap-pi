@@ -24,4 +24,4 @@
    - Other solution: find out how to use camera in Raspberry Pi Bullseye
   
    - To check you raspberry pi version: run `lsb_release -irdc`
-   - Alternative Solution [Using Bulleye Camera](https://www.tomshardware.com/how-to/use-raspberry-pi-camera-with-bullseye)
+   - Alternative Solutions [Using Bulleye Camera](https://www.tomshardware.com/how-to/use-raspberry-pi-camera-with-bullseye) and [The Raspberry Pi Camera With Python In 2023](https://raspberrytips.com/picamera2-raspberry-pi/)
