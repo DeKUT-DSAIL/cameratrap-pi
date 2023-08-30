@@ -61,8 +61,9 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
     `crontab -e`
     
-    `@reboot 'path_of_bash_file'`
-    
+    `@reboot power.sh`
+    `@reboot timeset.sh`
+    `@reboot cameratrap.sh`    
  
 
 
