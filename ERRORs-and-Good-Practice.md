@@ -15,6 +15,12 @@
    - Input ip address in VNC connect.
    - You've now accessed your Raspberry Pi remotely.
 
+   c. `forget a saved wifi network on a Raspberry Pi`
+   -In the terminal type: sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+   -Delete the relevant wifi network block (including the ‘network=’ and opening/closing braces.
+   -Press ctrl-x followed by ‘y’ and enter to save the file.
+   -You’re done!
+
 # Errors
 1. Camera is not enabled issue yet running on sudo raspi-config shows enabled camera:
    -Reason : Raspberry Pi OS image based on debian Bulleye does not support Picamera and raspicam apps. Raspberry Pi's driver in (debian) to access camera modules has
