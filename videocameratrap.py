@@ -4,7 +4,7 @@ images using a picamera once motion is detected.
 '''
 
 from gpiozero import MotionSensor
-from picamera import PiCamera
+from picamera2 import PiCamera2
 import RPi.GPIO as GPIO
 import logging
 import os
@@ -23,7 +23,7 @@ try:
     #set GPIO pin 17 as input from the Motion Sensor
     #set GPIO pin 27 as an output for the LED
     pir = MotionSensor(17) 
-    camera = PiCamera()
+    camera = PiCamera2()
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(17, GPIO.HIGH)
