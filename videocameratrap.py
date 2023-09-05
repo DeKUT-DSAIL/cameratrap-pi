@@ -4,7 +4,8 @@ images using a picamera once motion is detected.
 '''
 
 from gpiozero import MotionSensor
-from picamera2 import PiCamera2
+from picamera2.encoders import H264Encoder
+from picamera2 import Picamera2, Preview
 import RPi.GPIO as GPIO
 import logging
 import os
@@ -23,10 +24,13 @@ try:
     #set GPIO pin 17 as input from the Motion Sensor
     #set GPIO pin 27 as an output for the LED
     pir = MotionSensor(17) 
-    camera = PiCamera2()
+    camera = Picamera2()
+    camera_config = camera.create_still_configuration(main={"size": (1920, 1080)}, lores={"size": (640, 480)}, display="lores")
+    camera.configure(camera_config)
+    encoder = H264Encoder(bitrate=10000000)
+
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(17, GPIO.HIGH)
     GPIO.setup(27, GPIO.LOW) 
 
     while True:
@@ -39,7 +43,7 @@ try:
            #camera.stop_preview()
            #Capture video
            GPIO.output(27,1)
-           camera.start_recording(filename_h264)
+           camera.start_recording(encoder, filename_h264)
            camera.wait_recording(10)
            camera.stop_recording()
            #print("Motion detected!")
