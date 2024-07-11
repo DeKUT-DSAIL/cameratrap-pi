@@ -8,3 +8,8 @@ cd cameratrap-pi
 chmod +x power.sh
 chmod +x timeset.sh
 chmod +x cameratrap.sh
+cd
+crontab -e
+@reboot /home/impala/cameratrap-pi/power.sh
+@reboot /home/impala/cameratrap-pi/timeset.sh
+@reboot /home/impala/cameratrap-pi/cameratrap.sh
