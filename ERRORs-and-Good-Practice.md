@@ -42,7 +42,7 @@ Offending ECDSA key in C:\\Users\\Yuri/.ssh/known_hosts:9
 ECDSA host key for impala has changed and you have requested strict checking.
 Host key verification failed.`
 
-ssh-keygen -R `hostname`
+ssh-keygen -R `hostname` eg `waterbuck`
 
 5. Check if cameras are available
 `vcgencmd get_camera`
