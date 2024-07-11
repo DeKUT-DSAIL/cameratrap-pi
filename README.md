@@ -31,8 +31,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
 2. `./setup.sh`
 3. Enable Interfaces
-
-  `sudo raspi-config` 
+   `sudo raspi-config` 
 
 
 ### Option 2 
