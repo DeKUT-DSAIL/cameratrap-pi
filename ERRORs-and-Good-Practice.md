@@ -20,6 +20,30 @@
    -Delete the relevant wifi network block (including the ‘network=’ and opening/closing braces.
    -Press ctrl-x followed by ‘y’ and enter to save the file.
    -You’re done!
+4. `@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The ECDSA host key for impala has changed,
+and the key for the corresponding IP address 192.168.137.86
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:Tin7d/pOEebiKqG9GwEbd81E7EBMUd3593/FIio3w24.
+Please contact your system administrator.
+Add correct host key in C:\\Users\\Yuri/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in C:\\Users\\Yuri/.ssh/known_hosts:9
+ECDSA host key for impala has changed and you have requested strict checking.
+Host key verification failed.`
+
+ssh-keygen -R `hostname`
+
 
 # Errors
 1. Camera is not enabled issue yet running on sudo raspi-config shows enabled camera:
