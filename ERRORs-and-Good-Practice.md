@@ -45,7 +45,6 @@ Host key verification failed.`
 ssh-keygen -R `hostname`
 
 5. Check if cameras are available
-6. 
 `vcgencmd get_camera`
 
 --> supported=1 detected=1, libcamera interfaces=0 `if cameras are available`
