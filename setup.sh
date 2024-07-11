@@ -9,7 +9,7 @@ chmod +x power.sh
 chmod +x timeset.sh
 chmod +x cameratrap.sh
 cd
-crontab -e
-@reboot /home/impala/cameratrap-pi/power.sh
-@reboot /home/impala/cameratrap-pi/timeset.sh
-@reboot /home/impala/cameratrap-pi/cameratrap.sh
+# Add the desired commands to the crontab
+(crontab -l ; echo "@reboot /home/impala/cameratrap-pi/power.sh") | crontab -
+(crontab -l ; echo "@reboot /home/impala/cameratrap-pi/timeset.sh") | crontab -
+(crontab -l ; echo "@reboot /home/impala/cameratrap-pi/cameratrap.sh") | crontab -
