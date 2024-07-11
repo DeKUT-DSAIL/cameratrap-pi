@@ -22,7 +22,28 @@ A solar panel is used to recharge batteries. Our current powering system enables
 Our data is in the form of images saved in jpg format. They are saved in the format YY-MM-DD-H-M-S.
 The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, waterbucks and zebras.
 
+
 ## Raspberrypi setup process
+
+### Option 1 (easiest)
+
+1. `chmod +x setup.sh`
+
+2. `./setup.sh`
+
+3. Set crontab for the bash files to run 
+
+    `crontab -e`
+
+    `@reboot power.sh`
+
+    `@reboot timeset.sh`
+
+    `@reboot cameratrap.sh`    
+`
+
+
+### Option 2 (recommended)
 1. Update the raspberrypi
 
       `sudo apt-get update`
