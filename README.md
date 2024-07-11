@@ -25,14 +25,17 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
 ## Raspberrypi setup process
 
-### Option 1 (easiest)
+### Option 1 (easiest & recommended)
 
 1. `chmod +x setup.sh`
 
-2. `./setup.sh`  
+2. `./setup.sh`
+3. Enable Interfaces
+
+  `sudo raspi-config` 
 
 
-### Option 2 (recommended)
+### Option 2 
 1. Update the raspberrypi
 
       `sudo apt-get update`
