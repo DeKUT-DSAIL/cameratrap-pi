@@ -44,6 +44,9 @@ Host key verification failed.`
 
 ssh-keygen -R `hostname`
 
+5. Check if cameras are available
+`vcgencmd get_camera` --> supported=1 detected=1, libcamera interfaces=0 `if cameras are available`
+                        --> supported=0 detected=0 `otherwise`
 
 # Errors
 1. Camera is not enabled issue yet running on sudo raspi-config shows enabled camera:
