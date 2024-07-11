@@ -29,18 +29,7 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
 1. `chmod +x setup.sh`
 
-2. `./setup.sh`
-
-3. Set crontab for the bash files to run 
-
-    `crontab -e`
-
-    `@reboot power.sh`
-
-    `@reboot timeset.sh`
-
-    `@reboot cameratrap.sh`    
-`
+2. `./setup.sh`  
 
 
 ### Option 2 (recommended)
