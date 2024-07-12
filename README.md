@@ -27,10 +27,11 @@ The animals included in our dataset are Impalas, monkeys, warthogs, bushbucks, w
 
 ### Option 1 (easiest & recommended)
 
-1. `chmod +x setup.sh`
+1.`cd cameratrap-pi/`
+2. `chmod +x setup.sh`
 
-2. `./setup.sh`
-3. Enable Interfaces
+3. `./setup.sh`
+4. Enable Interfaces
    
    `sudo raspi-config` 
 
