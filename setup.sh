@@ -1,6 +1,17 @@
 sudo apt-get update -y && sudo apt-get upgrade -y
 git clone https://github.com/DeKUT-DSAIL/powering-raspberrypi.git
 git clone https://github.com/DeKUT-DSAIL/cameratrap-pi.git
+
+echo "Install Python 3.10"
+wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tar.xz
+tar -xvf Python-3.10.0.tar.xz
+cd Python-3.10.0
+./configure --enable-optimizations
+make -j 4
+sudo make altinstall
+python3.10 --version
+
+echo "continue"
 cd powering-raspberrypi
 ./requirements_setup.sh
 cd
